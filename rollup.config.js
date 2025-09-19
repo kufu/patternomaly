@@ -1,25 +1,22 @@
-import babel from 'rollup-plugin-babel';
-import babelrc from 'babelrc-rollup';
+import { readFileSync } from "fs";
 
-const pkg = require('./package.json');
+// package.jsonを読み込み
+const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
 
 export default {
-  entry: 'index.js',
-  plugins: [
-    babel(babelrc())
-  ],
-  external: Object.keys(pkg.dependencies),
-  targets: [
+  input: "index.js",
+  external: Object.keys(pkg.dependencies || {}),
+  output: [
     {
-      dest: pkg['main'],
-      format: 'umd',
-      moduleName: 'pattern',
-      sourceMap: true
+      file: pkg.main,
+      format: "umd",
+      name: "pattern",
+      sourcemap: true,
     },
     {
-      dest: pkg['jsnext:main'],
-      format: 'es',
-      sourceMap: true
-    }
-  ]
+      file: pkg["jsnext:main"],
+      format: "es",
+      sourcemap: true,
+    },
+  ],
 };
