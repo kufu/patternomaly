@@ -78,6 +78,27 @@ datasets: [{
 
 *Thanks to [obedm503](https://github.com/obedm503) for generating the example pattern image.*
 
+## Development
+
+To run the examples locally:
+
+```bash
+npm run serve
+```
+
+This will:
+1. Build the library
+2. Copy the built files to the examples directory
+3. Start a local server at `http://localhost:3000`
+
+Available examples:
+- `chart-types.html` - Chart.js integration examples
+- `optional.html` - Pattern toggle functionality
+- `patterns.html` - All available patterns display
+- `compare.html` - Pattern vs color comparison
+- `scaling.html` - Pattern scaling examples
+- `single.html` - Single pattern demo
+
 ## Providing a Pattern Alternative
 
 In order to provide an alternative view for visually impaired viewers it's a good idea to [provide a patterned alternative](http://betweentwobrackets.com/data-graphics-and-colour-vision/#patternstotherescue).
