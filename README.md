@@ -11,9 +11,9 @@ Easily generate patterns for use in data graphics.
 This library came about as part of [an issue in Chart.js](https://github.com/chartjs/Chart.js/issues/1323).
 
 ## Usage
-
-    pnpm install patternomaly
-
+```
+pnpm install @smarthr/patternomaly
+```
 ## ⚠️ テスト実行時の注意事項
 
 **背景**: セキュリティ要件によりpnpmの、`minimumReleaseAge`設定のためNodeバージョンを最新に更新しています。しかし、`canvas`パッケージ（テスト用）は何らかの事情により`pnpm install`では内部パッケージのビルドができないため、canvasのみ `npm install` を使用しています：
