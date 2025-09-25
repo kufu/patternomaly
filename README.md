@@ -12,7 +12,7 @@ This library came about as part of [an issue in Chart.js](https://github.com/cha
 
 ## Usage
 
-    npm install patternomaly
+    pnpm install patternomaly
 
 Generate a single canvas pattern
 
@@ -83,7 +83,7 @@ datasets: [{
 To run the examples locally:
 
 ```bash
-npm run serve
+pnpm run serve
 ```
 
 This will:

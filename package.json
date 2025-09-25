@@ -8,16 +8,16 @@
   "typings": "index.d.ts",
   "browser": "dist/patternomaly.js",
   "scripts": {
-    "prebuild": "npm run lint",
+    "prebuild": "pnpm lint",
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
-    "pretest": "npm run build",
+    "pretest": "pnpm build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepublishOnly": "npm test",
+    "prepublishOnly": "pnpm test",
     "lint": "eslint src/ test/",
-    "serve": "npm run build && cp dist/patternomaly.js examples/ && serve examples -p 3000",
-    "serve:dev": "npm run build && cp dist/patternomaly.js examples/ && serve examples -p 3000 --watch"
+    "serve": "pnpm build && cp dist/patternomaly.js examples/ && serve examples -p 3000",
+    "serve:dev": "pnpm build && cp dist/patternomaly.js examples/ && serve examples -p 3000 --watch"
   },
   "directories": {
     "test": "test"
