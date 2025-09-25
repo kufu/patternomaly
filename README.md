@@ -14,6 +14,22 @@ This library came about as part of [an issue in Chart.js](https://github.com/cha
 
     pnpm install patternomaly
 
+## ⚠️ テスト実行時の注意事項
+
+**背景**: セキュリティ要件によりpnpmの、`minimumReleaseAge`設定のためNodeバージョンを最新に更新しています。しかし、`canvas`パッケージ（テスト用）は何らかの事情により`pnpm install`では内部パッケージのビルドができないため、canvasのみ `npm install` を使用しています：
+
+```bash
+# メインの依存関係をpnpmでインストール
+pnpm install
+
+# canvasパッケージのみnpmで個別インストール（一時的な回避策）
+cd node_modules/canvas
+npm install
+
+# テスト実行
+pnpm test
+```
+
 Generate a single canvas pattern
 
     pattern.draw('square', '#1f77b4');
@@ -79,6 +95,8 @@ datasets: [{
 *Thanks to [obedm503](https://github.com/obedm503) for generating the example pattern image.*
 
 ## Development
+
+⚠️ **開発前の注意**: canvasパッケージを個別にインストールしてください（上記のセキュリティ注意事項を参照）。
 
 To run the examples locally:
 

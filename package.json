@@ -24,20 +24,16 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
-    "canvas": "^3.2.0",
+    "canvas": "^3.0.2",
     "eslint": "^9.35.0",
     "happy-dom": "^18.0.1",
     "rollup": "^4.51.0",
     "serve": "^14.2.5",
     "vitest": "^3.2.4"
   },
-  "author": {
-    "name": "Tom Loudon",
-    "url": "http://betweentwobrackets.com"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ashiguruma/patternomaly.git"
+    "url": "https://github.com/kufu/patternomaly"
   },
   "keywords": [
     "pattern",
